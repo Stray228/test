@@ -1,0 +1,287 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+
+header {
+    font-size: 24px;
+    line-height: 36px;
+    padding-left: 377px;
+    padding-top: 41px;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    max-width: 306px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+}
+.aside {
+    &__logo {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 31.45px;
+        margin-top: 39.1px;
+        padding-left: 41.54px;
+        margin-bottom: 64px;
+        cursor: pointer;
+    }
+    &__logo-title {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 39px;
+        display: flex;
+        align-items: baseline;
+        span {
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 15px;
+            padding-left: 4px;
+            color: #838383;
+        }
+    }
+    &__logo-img {
+        position: absolute;
+        left: 30.45px;
+        width: 34.09px;
+        height: 36.79px;
+    }
+    &__list {
+        flex: 1;
+    }
+    &__item {
+        max-width: 231px;
+        width: 100%;
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        color: #9197b3;
+        margin-bottom: 40px;
+        letter-spacing: -0.01em;
+        padding-right: 5px;
+        cursor: pointer;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__item-title {
+        flex: 1;
+        margin-left: 14px;
+    }
+}
+.aside__item.active,
+.aside__item:hover {
+    color: #ffffff;
+    background-color: #5932ea;
+    border-radius: 8px;
+    border: 1px solid #5932ea;
+    padding: 11px;
+    max-width: 250px;
+    margin-left: 28px;
+    margin-bottom: 28px;
+    margin-top: -15px;
+    svg path {
+        stroke: #ffffff;
+    }
+}
+.aside__item.active:nth-child(2),
+.aside__item.active:nth-child(5),
+.aside__item.active:nth-child(6),
+.aside__item:hover:nth-child(2),
+.aside__item:hover:nth-child(5),
+.aside__item:hover:nth-child(6) {
+    svg path {
+        fill: #ffffff;
+    }
+}
+.aside__user {
+    margin-bottom: 76px;
+    margin-left: 28px;
+    display: flex;
+    align-items: center;
+    &-logo {
+        margin-right: 12px;
+    }
+    &-job {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #757575;
+        letter-spacing: 0.01em;
+    }
+}
+
+.users {
+    margin: 51px 95px 258px 377px;
+    background: #ffffff;
+    box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+    border-radius: 30px;
+    max-width: 968px;
+    width: 100%;
+
+    padding: 30px 44px 40px 38px;
+}
+
+.users__header {
+    padding: 0px 9px 38px 0px;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: -0.01em;
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+        padding-bottom: 7px;
+    }
+    &-subtitle {
+        color: #16c098;
+    }
+    &-search {
+        margin-top: 10px;
+        background: #f9fbff;
+        border-radius: 10px;
+        padding-left: 36px;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        max-width: 216px;
+        width: 100%;
+        img {
+            position: absolute;
+            left: 8px;
+        }
+    }
+    &-input {
+        border: none;
+        background: #f9fbff;
+        &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: #b5b7c0;
+        }
+    }
+}
+.users__list th:nth-child(1) {
+    padding-right: 24px;
+    padding-left: 0;
+}
+.users__list th:nth-child(2) {
+    padding-right: 37px;
+}
+.users__list th:nth-child(3) {
+    padding-right: 25px;
+}
+.users__list th:nth-child(4) {
+    padding-right: 0px;
+}
+.users__list th:nth-child(5) {
+    padding-right: 54px;
+}
+.users__list th:nth-child(6) {
+    padding-right: 10px;
+}
+
+.users__list {
+    width: 100%;
+    letter-spacing: -0.01em;
+    color: #292d32;
+    &-header {
+        color: #b5b7c0;
+    }
+    &-status {
+        text-align: center;
+    }
+    th {
+        padding-bottom: 14px;
+        border-bottom: 1px solid #eeeeee;
+        letter-spacing: -0.01em;
+    }
+    tr {
+        text-align: left;
+        letter-spacing: -0.01em;
+    }
+    td {
+        color: #292d32;
+        border-bottom: 1px solid #eeeeee;
+        padding: 17.3px 0;
+        letter-spacing: -0.01em;
+    }
+    &-active {
+        width: 80px;
+        height: 29px;
+        div {
+            padding: 4px 12px;
+            text-align: center;
+            background: rgba(22, 192, 152, 0.38);
+            border: 1px solid #00b087;
+            color: #008767;
+            border-radius: 4px;
+        }
+    }
+    &-inactive {
+        width: 80px;
+        height: 29px;
+        div {
+            padding: 4px 12px;
+            background: #ffc5c5;
+            color: #df0404;
+            border: 1px solid #df0404;
+            border-radius: 4px;
+            text-align: center;
+        }
+    }
+}
+.users__pages {
+    margin-top: 29px;
+    display: flex;
+    justify-content: space-between;
+    &-view {
+        letter-spacing: -0.01em;
+        color: #b5b7c0;
+    }
+    &-link {
+        display: flex;
+    }
+    &-links {
+        background: #f5f5f5;
+        border: 1px solid #eeeeee;
+        border-radius: 4px;
+        color: #404b52;
+        width: 25px;
+        height: 24px;
+        text-align: center;
+        margin: 0 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    span {
+        margin: 0 5.5px;
+    }
+}
+.users__pages-links.active {
+    color: #ffffff;
+    background: #5932ea;
+    border: 1px solid #5932ea;
+}
+.users__pages-links:first-child {
+    margin-left: 0;
+}
+.users__pages-links:last-child {
+    margin-right: 0;
+}
